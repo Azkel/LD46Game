@@ -19,6 +19,10 @@ config/name="BatteryShopping"
 run/main_scene="res://scenes/levels/FirstLevel.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Inventory="*res://scripts/singletons/Inventory.gd"
+
 [physics]
 
 2d/cell_size=32
