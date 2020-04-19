@@ -21,7 +21,8 @@ func _ready():
 		allStoredItems += Inventory.currentInventory[x]
 	for x in allStoredItems:
 		if x in allRequiredItems:
-			allRequiredItems.remove(x)
+			var id = allRequiredItems.find(x)
+			allRequiredItems.remove(id)
 			score += 10
 		else:
 			minusScore += 5
