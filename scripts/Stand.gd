@@ -1,8 +1,10 @@
 extends Node2D
 
-export var type = "Beer"
-export var buyText = "Co tam kupujemy kierowniku?"
+export var type =  ""
+export var buyText = ""
 func _ready():
+	type = get_parent().type
+	buyText = get_parent().buyText
 	pass
 
 func interact(object):

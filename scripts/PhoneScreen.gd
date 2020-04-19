@@ -16,10 +16,10 @@ func refreshToBuy():
 		$Sprite.visible = false
 	else:
 		refreshInventory()
-		$Sprite/Battery.text = str(Inventory.batteryLevel/100) + "%"
+		$Sprite/Battery.text = str(Inventory.batteryLevel/1000) + "%"
 		counter += 1
 	
 func _process(delta):
 	if(self.visible):
-		Inventory.batteryLevel -= 2
+		Inventory.batteryLevel -= 10
 		refreshToBuy()

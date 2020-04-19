@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/levels/StartScene.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/OpenSans-SemiBoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 61
+outline_size = 3
+outline_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+extra_spacing_top = 7
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 514.143, 379.473 )
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -225.931
+margin_top = -254.94
+margin_right = 286.069
+margin_bottom = -148.94
+custom_fonts/normal_font = SubResource( 1 )
+text = "Panic Shopping"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = -277.01
+margin_top = -107.696
+margin_right = 332.99
+margin_bottom = 72.3036
+custom_fonts/normal_font = SubResource( 2 )
+text = "You were send shopping by your parents and made list on your phone.
+But what a surprise! When you reached a shop, your battery is almost dead.
+Buy only what is on the list and go back home!
+
+Battery dies faster when you're looking at phone screen."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = -234.563
+margin_top = 82.2574
+margin_right = 292.437
+margin_bottom = 182.257
+text = "Controls:
+Movement - Arrow Keys
+Interaction - Spacebar
+Check phone/cart - Spacebar when not looking at shelves/salesperson
+When presented with options, select by left mouse button."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_left = -178.02
+margin_top = -268.51
+margin_right = 348.98
+margin_bottom = -168.51
+custom_fonts/normal_font = SubResource( 3 )
+text = "Michał Smyk presents another shitty game:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+margin_left = -510.053
+margin_top = 335.211
+margin_right = 496.947
+margin_bottom = 435.211
+custom_fonts/normal_font = SubResource( 3 )
+text = "Ludum Dare 46 Game Jam - theme \"Keep it Alive\"."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+margin_left = -119.098
+margin_top = 162.091
+margin_right = 407.902
+margin_bottom = 262.091
+custom_fonts/normal_font = SubResource( 3 )
+text = "Press Spacebar to start."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+margin_left = -510.053
+margin_top = 367.947
+margin_right = 479.947
+margin_bottom = 467.947
+custom_fonts/normal_font = SubResource( 4 )
+text = "This is first 'game' I did solo, with everything except for fonts done by myself.Total time spent: around 1,5 day. "
+__meta__ = {
+"_edit_use_anchors_": false
+}

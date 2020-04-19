@@ -3,6 +3,7 @@ onready var ray = $RayCast2D
 onready var tween = $Tween
 export var speed = 3
 var current_location = Vector2.ONE
+onready var current_anim = $AnimFront
 var dupa = null
 var move = false
 var tile_size = 16
@@ -18,7 +19,8 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):	
-	
+	if(!$Tween.is_active()):
+		current_anim.playing = false
 	if(!Inventory.dialog_visible):
 		if tween.is_active():
 			return
@@ -47,12 +49,23 @@ func move(dir):
 	ray.cast_to = inputs[dir] * tile_size
 	ray.force_raycast_update()
 	current_location = inputs[dir]
-	Inventory.batteryLevel -= 1
+	Inventory.batteryLevel -= 5
+	match dir:
+		"ui_up":
+			$AnimFront.animation = "default"
+		"ui_right":
+			$AnimFront.animation = "Right"
+		"ui_left":
+			$AnimFront.animation = "Left"
+		_:
+			$AnimFront.animation = "New Anim"
 	if !ray.is_colliding():
 		move_tween(dir)
+			
 
 
 func move_tween(dir):
+	$AnimFront.play()
 	tween.interpolate_property(self, "position",
 		position, position + inputs[dir] * tile_size,
 		1.0/speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)

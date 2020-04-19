@@ -2,10 +2,13 @@ extends Node2D
 
 export var type = "Beer"
 export var buyText = "Co tam kupujemy kierowniku?"
+var stolen = false
 func _ready():
+	stolen = get_parent().steal
 	pass
 
 func interact(object):
+	Inventory.stolen = stolen
 	get_tree().change_scene("res://scenes/levels/EndLevel.tscn")
 	
 

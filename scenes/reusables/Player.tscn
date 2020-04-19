@@ -1,21 +1,39 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/tilemaps/gfx/Tilemap01.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://scenes/reusables/PhoneScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/reusables/Basket.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/sprites/MainChara.tres" type="SpriteFrames" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="DynamicFont" id=2]
+size = 10
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource( 2 )
 
+[node name="AnimFront" type="AnimatedSprite" parent="."]
+frames = ExtResource( 7 )
+animation = "Right"
+frame = 1
+playing = true
+
+[node name="AnimBack" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 7 )
+animation = "Left"
+frame = 1
+playing = true
+
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 115.293, 0.124893, 9.63841, 13.8793 )
@@ -33,51 +51,58 @@ zoom = Vector2( 0.25, 0.25 )
 
 [node name="PhoneScreen" parent="Camera2D" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 76.434, 14.6337 )
+position = Vector2( 76.7414, 35.8413 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Basket" parent="Camera2D" instance=ExtResource( 4 )]
 visible = false
-position = Vector2( -122.091, 10.453 )
+position = Vector2( -122.706, 28.587 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 200
 
 [node name="BuyUI" type="Node2D" parent="Camera2D"]
 visible = false
+position = Vector2( 0, 27.3548 )
 z_index = 300
 
 [node name="Option1" type="Button" parent="Camera2D/BuyUI"]
-margin_left = -95.9125
-margin_top = 0.970596
-margin_right = -56.9125
-margin_bottom = 20.9706
+margin_left = -125.454
+margin_top = 33.0
+margin_right = -63.4545
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 6 )
+text = "Guwno"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Option2" type="Button" parent="Camera2D/BuyUI"]
-margin_left = -18.5881
-margin_top = 0.970596
-margin_right = 20.4119
-margin_bottom = 20.9706
+margin_left = -46.4545
+margin_top = 33.0
+margin_right = 28.5455
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 6 )
+text = "Szajs"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Option3" type="Button" parent="Camera2D/BuyUI"]
-margin_left = 55.5009
-margin_top = 2.26473
-margin_right = 94.5009
-margin_bottom = 22.2647
+margin_left = 41.9395
+margin_top = 33.3853
+margin_right = 122.94
+margin_bottom = 55.3853
+custom_fonts/font = ExtResource( 6 )
+text = "Masturbacja"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BuyText" type="RichTextLabel" parent="Camera2D/BuyUI"]
-margin_left = -89.8526
-margin_top = -62.0882
-margin_right = 90.1474
-margin_bottom = -11.0882
+margin_left = -125.294
+margin_top = 49.9426
+margin_right = 125.706
+margin_bottom = 72.9426
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/normal_font = SubResource( 2 )
