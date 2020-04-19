@@ -70,12 +70,12 @@ __meta__ = {
 }
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
-margin_left = -178.02
-margin_top = -268.51
-margin_right = 348.98
-margin_bottom = -168.51
+margin_left = -232.02
+margin_top = -273.51
+margin_right = 294.98
+margin_bottom = -173.51
 custom_fonts/normal_font = SubResource( 3 )
-text = "Michał Smyk presents another shitty game:"
+text = "Azkel Kusoft (not)Enterprise presents another shitty game:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
