@@ -11,7 +11,7 @@ var possibleItems = {
 	"Beer" : [ "IPA", "Lager", "Pils"],
 	"Fruits": [ "Apples", "Bananas", "Tomatoes"],
 	"Spices": [ "Pepper", "Salt", "Oregano"],
-	"Everyday Items": [ "Condoms", "Tissues", "Soap"],
+	"Liquid": [ "Vodka", "Whisky", "Rum"],
 	"Tea": [ "Green Tea", "Black Tea", "Tatratea"],
 	"Dairy": [ "Milk", "Butter", "Yoghurt"],
 	"Meat": [ "Chicken", "Beef", "Turkey"],
