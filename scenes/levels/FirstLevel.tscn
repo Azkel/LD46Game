@@ -1,24 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tilemaps/ShopTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/reusables/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/reusables/Stand.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/reusables/Exit.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/sprites/SecondChara.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/BeepBox-Song.wav" type="AudioStream" id=7]
 
-[sub_resource type="DynamicFont" id=1]
-size = 7
-font_data = ExtResource( 5 )
-
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ SubResource( 2 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -31,7 +26,7 @@ z_index = 2
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -458746, 20, 0, -458744, 20, 0, -458741, 20, 0, -393210, 15, 0, -393209, 15, 0, -393208, 15, 0, -393207, 15, 0, -393206, 15, 0, -393205, 15, 0, -393204, 15, 0, -262139, 24, 65536, -262138, 24, 1, -262137, 24, 1, -262136, 24, 2, -262134, 24, 0, -262133, 24, 1, -262132, 24, 1, -262131, 24, 65537, -131069, 20, 0, -131067, 24, 65536, -131066, 24, 1, -131065, 24, 1, -131064, 24, 2, -131062, 24, 0, -131061, 24, 1, -131060, 24, 1, -131059, 24, 65537, -131058, 20, 0, -65535, 20, 0, -65522, 20, 0, 0, 22, 65536, 1, 22, 4, 2, 22, 4, 3, 22, 4, 4, 22, 4, 5, 22, 65540, 6, 22, 65541, 7, 22, 65540, 8, 22, 5, 9, 22, 3, 12, 24, 65538, 13, 14, 0, 14, 14, 0, 15, 14, 0, 16, 14, 0, 131073, 18, 0, 131075, 23, 0, 131076, 23, 131072, 131077, 23, 65538, 131078, 22, 65536, 131079, 22, 4, 131080, 22, 5, 131081, 22, 5, 131082, 22, 65540, 131083, 22, 65539, 131085, 23, 0, 131086, 23, 131072, 131087, 23, 131073, 131088, 23, 131072, 131089, 23, 2, 131090, 20, 0, 196609, 18, 0, 262145, 18, 0, 262147, 17, 0, 262148, 17, 0, 262149, 18, 0, 262150, 18, 0, 262151, 18, 0, 262152, 22, 0, 262153, 22, 4, 262154, 22, 4, 262155, 22, 65539, 262157, 17, 0, 262158, 19, 0, 262159, 17, 0, 262160, 18, 0, 262162, 20, 0, 393209, 19, 0, 393210, 16, 0, 393211, 19, 0, 393212, 19, 0, 393213, 19, 0, 327681, 18, 0, 327688, 21, 0 )
+tile_data = PoolIntArray( -458746, 25, 131073, -458745, 25, 131073, -458744, 25, 1, -458743, 25, 1, -458742, 25, 1, -458741, 25, 2, -458740, 25, 2, -393211, 26, 65537, -393210, 26, 65536, -393209, 26, 1, -393208, 26, 0, -393207, 26, 65536, -393206, 26, 1, -393205, 26, 0, -393204, 26, 1, -262139, 24, 65536, -262138, 24, 1, -262137, 24, 1, -262136, 24, 2, -262134, 24, 0, -262133, 24, 1, -262132, 24, 1, -262131, 24, 65537, -131068, 25, 0, -131067, 24, 65536, -131066, 24, 1, -131065, 24, 1, -131064, 24, 2, -131062, 24, 0, -131061, 24, 1, -131060, 24, 1, -131059, 24, 65537, -131058, 25, 65537, -65536, 25, 65536, -65535, 25, 65536, -65534, 25, 65536, -65522, 25, 131072, 0, 22, 4, 1, 22, 4, 2, 22, 4, 3, 22, 4, 4, 22, 4, 5, 22, 65540, 6, 22, 65541, 7, 22, 65540, 8, 22, 5, 9, 22, 3, 12, 24, 65538, 13, 14, 0, 14, 14, 0, 15, 14, 0, 16, 14, 0, 65539, 21, 0, 131073, 18, 0, 131075, 23, 0, 131076, 23, 131072, 131077, 23, 65538, 131078, 22, 65536, 131079, 22, 4, 131080, 22, 5, 131081, 22, 5, 131082, 22, 65540, 131083, 22, 65539, 131085, 23, 0, 131086, 23, 131072, 131087, 23, 131073, 131088, 23, 131072, 131089, 23, 2, 131090, 25, 131074, 196609, 18, 0, 262145, 18, 0, 262147, 17, 0, 262148, 17, 0, 262149, 18, 0, 262150, 18, 0, 262151, 18, 0, 262152, 22, 0, 262153, 22, 4, 262154, 22, 4, 262155, 22, 65539, 262157, 17, 0, 262158, 19, 0, 262159, 17, 0, 262160, 18, 0, 262162, 25, 65538, 393209, 19, 0, 393210, 16, 0, 393211, 19, 0, 393212, 19, 0, 393213, 19, 0, 327681, 18, 0, 327688, 21, 0 )
 
 [node name="Tea" parent="Objects" instance=ExtResource( 3 )]
 position = Vector2( 242.237, 71.9128 )
@@ -83,8 +78,8 @@ type = "Dairy"
 buyText = "Cow-based products... Yuck!"
 
 [node name="Cheese" parent="Objects" instance=ExtResource( 3 )]
-position = Vector2( 143.911, -88.0071 )
-scale = Vector2( 1.6, 1 )
+position = Vector2( 151.672, -88.5078 )
+scale = Vector2( 2.4, 1 )
 z_index = 250
 type = "Cheese"
 buyText = "High-quality goods here!"
@@ -102,123 +97,6 @@ steal = true
 [node name="Exit2" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( -88.7151, 86.5716 )
 
-[node name="Label" type="Label" parent="Objects"]
-margin_left = 294.116
-margin_top = 33.8518
-margin_right = 334.116
-margin_bottom = 47.8518
-rect_pivot_offset = Vector2( 0, 21.3373 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Items"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="Objects"]
-margin_left = 21.0816
-margin_top = -14.8851
-margin_right = 61.0816
-margin_bottom = -0.885067
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Fruits"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="Objects"]
-margin_left = 294.014
-margin_top = 65.6423
-margin_right = 334.014
-margin_bottom = 79.6423
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Tea"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label4" type="Label" parent="Objects"]
-margin_left = 229.777
-margin_top = -30.5602
-margin_right = 269.777
-margin_bottom = -16.5602
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Meat"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label9" type="Label" parent="Objects"]
-margin_left = 131.667
-margin_top = -110.591
-margin_right = 171.667
-margin_bottom = -96.5907
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Cheese"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="Objects"]
-margin_left = 101.916
-margin_top = -110.157
-margin_right = 141.916
-margin_bottom = -96.1572
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Dairy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label6" type="Label" parent="Objects"]
-margin_left = 184.007
-margin_top = -110.446
-margin_right = 224.007
-margin_bottom = -96.4462
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Beer"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label7" type="Label" parent="Objects"]
-margin_left = 53.0466
-margin_top = -30.8676
-margin_right = 93.0466
-margin_bottom = -16.8676
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Frozen"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label8" type="Label" parent="Objects"]
-margin_left = 228.24
-margin_top = -14.5777
-margin_right = 268.24
-margin_bottom = -0.577713
-rect_pivot_offset = Vector2( 170.721, 50.0053 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Spices"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Ground" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -228,7 +106,7 @@ tile_data = PoolIntArray( -393211, 12, 0, -393210, 12, 1, -393209, 12, 1, -39320
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Ground"]
 position = Vector2( -87.4704, 84.961 )
 z_index = 1
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 
 [node name="Area2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -88.4573, 92.5886 )
